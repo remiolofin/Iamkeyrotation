@@ -7,13 +7,13 @@ from botocore.exceptions import ClientError
 
 
 # How many days before sending alerts about the key age?
-ALERT_AFTER_N_DAYS = 100
+ALERT_AFTER_N_DAYS = 90
 # How ofter we have set the cron to run the Lambda?
 SEND_EVERY_N_DAYS = 3
 # Who send the email?
 SES_SENDER_EMAIL_ADDRESS = 'example@example.com'
 # Where did we setup SES?
-SES_REGION_NAME = 'eu-west-1'
+SES_REGION_NAME = 'eu-east-1'
 
 iam_client = boto3.client('iam')
 ses_client = boto3.client('ses', region_name=SES_REGION_NAME)
